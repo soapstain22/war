@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ctd2gmtsjohb7"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="class" type="ItemList" parent="Control"]
+layout_mode = 2
+anchor_right = 2.41
+anchor_bottom = 2.371
+offset_right = 123.6
+offset_bottom = 21.16
+auto_height = true
+item_count = 4
+item_0/text = "veteran"
+item_1/text = "hobo"
+item_2/text = "child"
+item_3/text = "college graduate"
+
+[node name="weapon" type="ItemList" parent="Control/class"]
+layout_mode = 2
+offset_left = 220.0
+offset_top = 1.0
+offset_right = 336.0
+offset_bottom = 75.0
+auto_height = true
+
+[node name="sidearm" type="ItemList" parent="Control/class"]
+layout_mode = 0
+auto_height = true

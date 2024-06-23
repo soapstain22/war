@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnkjc7xva5tfi"]
+
+[ext_resource type="Script" path="res://bomb.gd" id="1_htxwn"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jnjdp"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+contact_monitor = true
+linear_velocity = Vector3(2.14, 0, 0)
+script = ExtResource("1_htxwn")
+
+[node name="bomb" type="CSGSphere3D" parent="RigidBody3D"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="explos" type="CSGSphere3D" parent="RigidBody3D/bomb"]
+transform = Transform3D(3.6, 0, 0, 0, 3.6, 0, 0, 0, 3.6, 0, 0, 0)
+visible = false
+operation = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("SphereShape3D_jnjdp")

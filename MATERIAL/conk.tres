@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cmk0toxo4tige"]
+
+[ext_resource type="Texture2D" uid="uid://dey5vgymfl4d2" path="res://IMG/Panels 3_1024.png" id="1_matdg"]
+
+[resource]
+albedo_texture = ExtResource("1_matdg")
+rim = 0.35
+heightmap_scale = 4.975
+uv1_triplanar = true
+uv1_triplanar_sharpness = 12.1257
+billboard_keep_scale = true
+grow_amount = -0.01
+distance_fade_max_distance = 8.65
