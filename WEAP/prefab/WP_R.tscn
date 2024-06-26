@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dowwqspxheytq"]
+[gd_scene load_steps=8 format=3 uid="uid://dowwqspxheytq"]
 
-[ext_resource type="Script" path="res://WEAP/scripts/Weapon.gd" id="1_opjyp"]
-[ext_resource type="PackedScene" uid="uid://dnkjc7xva5tfi" path="res://WEAP/projectile/rocket.tscn" id="2_48w3r"]
+[ext_resource type="Script" path="res://WEAP/scripts/Gun.gd" id="1_3lank"]
+[ext_resource type="PackedScene" uid="uid://dnkjc7xva5tfi" path="res://WEAP/projectile/rocket.tscn" id="2_ixfdg"]
 [ext_resource type="Texture2D" uid="uid://bu877fpdhylxh" path="res://IMG/hud/weapons/launcher.png" id="3_3xc8w"]
+[ext_resource type="AudioStream" uid="uid://dbuki7qko1pkc" path="res://sfx/WEAP1005.WAV" id="3_tt3lu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h7qsq"]
 resource_name = "DefaultMaterial"
@@ -44,18 +45,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_nu8l2")
 
-[node name="Node3D" type="Node3D" node_paths=PackedStringArray("model")]
-script = ExtResource("1_opjyp")
-model = NodePath("Cylinder")
-bullet = ExtResource("2_48w3r")
-clip = 4
-clipsize = 23
-ammo = 5
-maxammo = 5
-ammotimerOnreset = 5
-ammotimer = 5
-cooldown = 5
-delay = 5
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_3lank")
+bullet = ExtResource("2_ixfdg")
+throwPoint = Vector3(10, -10, 0)
+firesound = ExtResource("3_tt3lu")
 image = ExtResource("3_3xc8w")
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]

@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwqjg8ir1otcg"]
+
+[ext_resource type="Script" path="res://thePlayerOfTheGameThatIsBeingPlayed.gd" id="1_xbier"]
+[ext_resource type="Script" path="res://hud.gd" id="2_tqpvl"]
+[ext_resource type="Texture2D" uid="uid://babtwgfit1ex5" path="res://IMG/hud/hud.png" id="3_i0ifh"]
+[ext_resource type="Texture2D" uid="uid://7c201cy3pitt" path="res://IMG/hud/weapon.png" id="4_b8rae"]
+[ext_resource type="Texture2D" uid="uid://vwhb1v0gjnca" path="res://IMG/hud/weapons/smg.png" id="5_50k28"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7n8ny"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_xbier")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Camera3D"]
+omni_range = 182.099
+
+[node name="hand" type="Node3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -0.7)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_7n8ny")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.002
+anchor_top = 0.008
+anchor_right = 0.002
+anchor_bottom = 0.008
+offset_left = -2.304
+offset_top = -5.184
+offset_right = 37.696
+offset_bottom = 34.816
+script = ExtResource("2_tqpvl")
+
+[node name="mainBox" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 199.0
+offset_bottom = 97.0
+texture = ExtResource("3_i0ifh")
+
+[node name="weaponBox" type="TextureRect" parent="Control/mainBox"]
+layout_mode = 0
+offset_top = 98.0
+offset_right = 96.0
+offset_bottom = 194.0
+texture = ExtResource("4_b8rae")
+
+[node name="weapon" type="TextureRect" parent="Control/mainBox/weaponBox"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 99.0
+offset_bottom = 99.0
+texture = ExtResource("5_50k28")
+
+[node name="Label2" type="Label" parent="Control/mainBox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.532
+anchor_bottom = 0.323
+offset_left = 24.0
+offset_top = 56.0
+offset_right = 42.72
+offset_bottom = 66.08
+text = "fart"
+
+[node name="Label" type="Label" parent="Control/mainBox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.532
+anchor_bottom = 0.323
+offset_left = 24.0
+offset_top = 17.0
+offset_right = 42.72
+offset_bottom = 27.08
+text = "weed"

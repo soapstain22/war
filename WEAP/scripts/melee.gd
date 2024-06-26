@@ -2,27 +2,21 @@ extends Weapon
 class_name Melee
 @export var damage = 5
 @export var hitbox = Area3D
+@export var delay = 1
+var currentDelay = 0
+@export var swingTarget:Transform3D
+@export var swingStart:Transform3D
+@export var root:Transform3D
+var swinging:bool = false
 func _ready():
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	currentAim = lerp(defaultAim,aimdownPos,cooldown/delay)
-	var a = hitbox as Area3D
-	#a.get_overlapping_bodies()
-func stopAimDown():
-	pass
+	if ((currentDelay - delta) >0):
+		currentDelay -= delta
+	else:
+		currentDelay = delay
 func fire():
-	print("a")
-	if (cooldown <= 0):
-		print("b")
-		return shoot()
-
-func reload():
-	if ammo != maxammo:
-		attemptingReload = true
-func shoot():
-	cooldown = delay
-	#$"..".add_child(newbullet)
-	print("this part")
-
+	
+	pass

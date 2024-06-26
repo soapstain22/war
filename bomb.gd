@@ -4,8 +4,8 @@ var collider:CollisionShape3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	explosion=$bomb/explos
-	collider=$RigidBody3D/CollisionShape3D
+	explosion=$Cylinder/explos
+	collider=$CollisionShape3D
 	pass # Replace with function body.
 
 

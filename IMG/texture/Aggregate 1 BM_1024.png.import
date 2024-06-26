@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7i7iw638g5vc"
-path.s3tc="res://.godot/imported/shovel.png-e300b47af651c0ca8ad9f4fd3c3524e7.s3tc.ctex"
+uid="uid://dc2bffkmd5pi"
+path.s3tc="res://.godot/imported/Aggregate 1 BM_1024.png-b586d715b7276e801c99197a9dcf5827.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://IMG/hud/weapons/shovel.png"
-dest_files=["res://.godot/imported/shovel.png-e300b47af651c0ca8ad9f4fd3c3524e7.s3tc.ctex"]
+source_file="res://IMG/texture/Aggregate 1 BM_1024.png"
+dest_files=["res://.godot/imported/Aggregate 1 BM_1024.png-b586d715b7276e801c99197a9dcf5827.s3tc.ctex"]
 
 [params]
 

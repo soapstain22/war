@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+class_name Player
 @export var SPEED : float = 5.0
 @export var JUMP_VELOCITY : float = 4.5
 @export var MOUSE_SENSITIVITY : float = 0.5
@@ -17,6 +17,8 @@ var weapons : Array
 var weaponIndex = 0
 var HUD
 var hand
+@export var maxhealth= 100
+@export var health = 100 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -34,10 +36,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		changeweapon(-1)
 	if event.is_action_pressed("action"):
 		var a = weapons[weaponIndex] as Weapon
-		a.aimdown = true
+		#a.aimdown = true
 	else:
 		var a = weapons[weaponIndex] as Weapon
-		a.aimdown = false
+		#a.aimdown = false
 func _input(event):
 	#if event.is_action_pressed("exit"):
 	#	get_tree().quit()
@@ -68,11 +70,18 @@ func _ready():
 	give_instance(preload("res://WEAP/prefab/WP_R.tscn"))
 	give_instance(preload("res://WEAP/prefab/WP_B.tscn"))
 	give_instance(preload("res://WEAP/prefab/WP_G.tscn"))
+	give_instance(preload("res://WEAP/prefab/WP_BallGun.tscn"))
 	# Get mouse input
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	CAMERA_CONTROLLER = $Camera3D
 	HUD = $Control
-	
+func ask_health(ct):
+	if maxhealth <= health:
+		print("health full")
+		return false
+	health= clamp(ct + health,0,maxhealth)
+
+	return true
 func _physics_process(delta):
 	
 	# Update camera movement based on mouse movement
@@ -100,7 +109,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	var a = weapons[weaponIndex]
-	a.global_position = hand.global_position + CAMERA_CONTROLLER.basis*a.currentAim
+	#a.global_position = hand.global_position + CAMERA_CONTROLLER.basis*a.currentAim
 	move_and_slide()
 	# THIS WAS BLATANTLY STOLEN FROM https://github.com/StayAtHomeDev-Git/FPS-Godot-Basic-Setup/blob/main/controllers/scripts/fps_controller.gd
 func attack():
@@ -108,17 +117,12 @@ func attack():
 	#a.add_child(weapons[weaponIndex])
 	#var hi = weapons[weaponIndex].fire() as RigidBody3D
 	var a = weapons[weaponIndex] as Weapon
-	var b = a.fire() as RigidBody3D
-	var c = CAMERA_CONTROLLER.global_position 
+	var b = a.attack()
 	if b != null:
 		b.global_position = hand.global_position
-		b.rotation = rotation
-		add_sibling(b)
-		b.add_constant_force(b.basis*Vector3.FORWARD)
-		print("shot")
-	print(b)
-	HUD.setMaxAmmo(a.maxammo)
-	HUD.setAmmo(a.ammo)
+		b.rotation = hand.rotation
+	#HUD.setMaxAmmo(a.maxammo)
+	#HUD.setAmmo(a.ammo)
 	
 	#hi.global_position = global_position
 func changeweapon(dir):
@@ -138,3 +142,5 @@ func give_instance(weap):
 
 func set_equipped(weapo):
 	pass
+func add_health(toadd):
+	health += toadd
