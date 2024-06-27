@@ -3,20 +3,20 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ck48683b2y8jh"
-path="res://.godot/imported/arrow.fbx-e65707e8714118db8a521298d31a7153.scn"
+uid="uid://bkl6kt1oqkawf"
+path="res://.godot/imported/rocketlauncher.fbx-c1eb8375d6d8d4bf16c618ad072fe4b5.scn"
 
 [deps]
 
-source_file="res://WEAP/model/arrow.fbx"
-dest_files=["res://.godot/imported/arrow.fbx-e65707e8714118db8a521298d31a7153.scn"]
+source_file="res://WEAPONS/model/rocketlauncher.fbx"
+dest_files=["res://.godot/imported/rocketlauncher.fbx-c1eb8375d6d8d4bf16c618ad072fe4b5.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=0.2
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true

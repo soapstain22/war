@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dwrs1nny1a3pc"
-path="res://.godot/imported/rocket.fbx-64d5a8f61659927c0a5892cd7d57e460.scn"
+uid="uid://d18heii7t7vwd"
+path="res://.godot/imported/broom.fbx-33b863b696591d4c624a77ba60057591.scn"
 
 [deps]
 
-source_file="res://WEAP/model/rocket.fbx"
-dest_files=["res://.godot/imported/rocket.fbx-64d5a8f61659927c0a5892cd7d57e460.scn"]
+source_file="res://WEAPONS/model/broom.fbx"
+dest_files=["res://.godot/imported/broom.fbx-33b863b696591d4c624a77ba60057591.scn"]
 
 [params]
 

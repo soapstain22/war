@@ -4,7 +4,7 @@
 [ext_resource type="Material" uid="uid://cmk0toxo4tige" path="res://MATERIAL/conk.tres" id="2_3udce"]
 [ext_resource type="Material" uid="uid://dog7a5ugduubm" path="res://MATERIAL/bricks.tres" id="2_yc4a1"]
 [ext_resource type="Material" uid="uid://bsrfghe046mdv" path="res://MATERIAL/walls.tres" id="4_vtfn3"]
-[ext_resource type="PackedScene" uid="uid://dnkjc7xva5tfi" path="res://WEAP/projectile/rocket.tscn" id="5_jc14f"]
+[ext_resource type="PackedScene" uid="uid://dnkjc7xva5tfi" path="res://PROJECTILES/prefab/rocket.tscn" id="5_jc14f"]
 
 [node name="rooty" type="Node3D"]
 

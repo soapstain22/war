@@ -16,7 +16,7 @@ var _camera_rotation : Vector3
 var weapons : Array
 var weaponIndex = 0
 var HUD
-var hand
+var hand: Node3D
 @export var maxhealth= 100
 @export var health = 100 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -67,10 +67,10 @@ func _update_camera(delta):
 func _ready():
 	hand = $Camera3D/hand
 	
-	give_instance(preload("res://WEAP/prefab/WP_R.tscn"))
-	give_instance(preload("res://WEAP/prefab/WP_B.tscn"))
-	give_instance(preload("res://WEAP/prefab/WP_G.tscn"))
-	give_instance(preload("res://WEAP/prefab/WP_BallGun.tscn"))
+	give_instance(preload("res://WEAPONS/prefab/WP_BallGun.tscn"))
+	give_instance(preload("res://WEAPONS/prefab/WP_B.tscn"))
+	give_instance(preload("res://WEAPONS/prefab/WP_G.tscn"))
+	give_instance(preload("res://WEAPONS/prefab/WP_R.tscn"))
 	# Get mouse input
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	CAMERA_CONTROLLER = $Camera3D
@@ -117,13 +117,16 @@ func attack():
 	#a.add_child(weapons[weaponIndex])
 	#var hi = weapons[weaponIndex].fire() as RigidBody3D
 	var a = weapons[weaponIndex] as Weapon
-	var b = a.attack()
+	var b = a.attack() as RigidBody3D
 	if b != null:
 		b.global_position = hand.global_position
-		b.rotation = hand.rotation
+		b.global_rotation = hand.global_rotation
+		b.apply_central_force(CAMERA_CONTROLLER.global_basis*Vector3.FORWARD)
+		b.apply_impulse(CAMERA_CONTROLLER.global_basis*Vector3.FORWARD*a.force)
+		print("hi")
 	#HUD.setMaxAmmo(a.maxammo)
 	#HUD.setAmmo(a.ammo)
-	
+	pass
 	#hi.global_position = global_position
 func changeweapon(dir):
 	print("changing")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dowwqspxheytq"]
 
-[ext_resource type="Script" path="res://WEAP/scripts/Gun.gd" id="1_3lank"]
-[ext_resource type="PackedScene" uid="uid://dnkjc7xva5tfi" path="res://WEAP/projectile/rocket.tscn" id="2_ixfdg"]
+[ext_resource type="Script" path="res://WEAPONS/scripts/Gun.gd" id="1_3lank"]
+[ext_resource type="PackedScene" uid="uid://dnkjc7xva5tfi" path="res://PROJECTILES/prefab/rocket.tscn" id="2_ixfdg"]
 [ext_resource type="Texture2D" uid="uid://bu877fpdhylxh" path="res://IMG/hud/weapons/launcher.png" id="3_3xc8w"]
 [ext_resource type="AudioStream" uid="uid://dbuki7qko1pkc" path="res://sfx/WEAP1005.WAV" id="3_tt3lu"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://0rfwb7idev2c"]
 
-[ext_resource type="Script" path="res://WEAP/scripts/Weapon.gd" id="1_50i1b"]
+[ext_resource type="Script" path="res://WEAPONS/scripts/Weapon.gd" id="1_50i1b"]
 [ext_resource type="Texture2D" uid="uid://blpva521sxvmi" path="res://IMG/hud/weapons/bow.png" id="3_6ycp8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yxks8"]

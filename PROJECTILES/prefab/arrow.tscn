@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ce46if5fn1rb4"]
 
-[ext_resource type="Script" path="res://WEAP/projectile/arrow.gd" id="1_6agix"]
+[ext_resource type="Script" path="res://PROJECTILES/code/arrow.gd" id="1_6agix"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8wbn7"]
 size = Vector3(0.01, 0.0610156, 0.01)

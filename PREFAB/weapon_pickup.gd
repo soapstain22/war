@@ -1,4 +1,4 @@
 extends Node3D
 class_name WeaponPickup
-extends Pickup
+extends Collectable
 @export var pickup:Weapon

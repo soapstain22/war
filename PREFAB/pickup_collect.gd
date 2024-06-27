@@ -9,7 +9,6 @@ class_name Collectable
 @export var forced:bool
 
 func _on_area_3d_body_entered(body):
-	print(body)
 	if (body.get_class() == "CharacterBody3D"):
 		var a = body as Player
 		

@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bppq1ctor0b8w"]
+[gd_scene load_steps=7 format=3 uid="uid://bppq1ctor0b8w"]
 
 [ext_resource type="Material" uid="uid://dog7a5ugduubm" path="res://MATERIAL/bricks.tres" id="1_2tq5y"]
 [ext_resource type="PackedScene" uid="uid://dwqjg8ir1otcg" path="res://player.tscn" id="1_8u85u"]
 [ext_resource type="Material" uid="uid://ot758pvgv3oh" path="res://MATERIAL/stones.tres" id="1_nrg1f"]
 [ext_resource type="Material" uid="uid://cmk0toxo4tige" path="res://MATERIAL/conk.tres" id="2_xm5e3"]
 [ext_resource type="Material" uid="uid://btj7dp0pghbnn" path="res://MATERIAL/lawn.tres" id="3_4x68c"]
-[ext_resource type="PackedScene" uid="uid://cip4hrbq08v24" path="res://PREFAB/health_pickup.tscn" id="5_c8l80"]
-[ext_resource type="Script" path="res://WEAP/scripts/destructable.gd" id="7_k58q7"]
+[ext_resource type="Script" path="res://PREFAB/destructable.gd" id="7_k58q7"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -74,9 +73,6 @@ light_energy = 0.935
 light_indirect_energy = 9.453
 light_volumetric_fog_energy = 5.226
 light_angular_distance = 28.8
-
-[node name="Health" parent="." instance=ExtResource("5_c8l80")]
-transform = Transform3D(-0.683013, 0.683013, 0.258819, 0.183013, -0.183013, 0.965926, 0.707107, 0.707107, 4.26326e-14, -30.2, 0.25, -5.30711)
 
 [node name="Node3D" type="Node3D" parent="."]
 script = ExtResource("7_k58q7")

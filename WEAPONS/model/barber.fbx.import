@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://brv2hxtt8e06"
-path="res://.godot/imported/barber.fbx-9742038dc79703a7760a949256c4402a.scn"
+path="res://.godot/imported/barber.fbx-9f9c81b2436c1c58669deaecbbd1efbe.scn"
 
 [deps]
 
-source_file="res://WEAP/model/barber.fbx"
-dest_files=["res://.godot/imported/barber.fbx-9742038dc79703a7760a949256c4402a.scn"]
+source_file="res://WEAPONS/model/barber.fbx"
+dest_files=["res://.godot/imported/barber.fbx-9f9c81b2436c1c58669deaecbbd1efbe.scn"]
 
 [params]
 
