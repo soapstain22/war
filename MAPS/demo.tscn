@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bppq1ctor0b8w"]
+[gd_scene load_steps=15 format=3 uid="uid://bppq1ctor0b8w"]
 
 [ext_resource type="Material" uid="uid://dog7a5ugduubm" path="res://MATERIAL/bricks.tres" id="1_2tq5y"]
 [ext_resource type="PackedScene" uid="uid://dwqjg8ir1otcg" path="res://player.tscn" id="1_8u85u"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://code/destructable.gd" id="9_bchx3"]
 [ext_resource type="Texture2D" uid="uid://cm1h2b7r1tdy" path="res://IMG/texture/Vertical Siding 4_1024.png" id="9_u44q1"]
 [ext_resource type="PackedScene" uid="uid://bo04i6uf62aeu" path="res://Interact/Scenes/Button.tscn" id="11_7hqlq"]
+[ext_resource type="PackedScene" uid="uid://deofr6q3l1ba3" path="res://Interact/Scenes/door.tscn" id="12_vdhv8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mr44t"]
 size = Vector3(2, 0.1, 2)
@@ -136,7 +137,7 @@ size = Vector3(2, 0.1, 2)
 material = SubResource("StandardMaterial3D_qw2ud")
 
 [node name="Button" parent="." instance=ExtResource("11_7hqlq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.9136, -0.641092, -3.34467)
+transform = Transform3D(-2.91043e-08, -0.66583, -0.746104, 1, -4.37114e-08, -1.56707e-15, -3.26132e-08, -0.746104, 0.66583, -29.6248, 0.731254, 0.530038)
 prompt_message = "Subscribe"
 
 [node name="Button2" parent="." instance=ExtResource("11_7hqlq")]
@@ -147,4 +148,11 @@ prompt_message = "Chat"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.9136, -0.641092, -3.34467)
 prompt_message = "DM"
 
+[node name="Door" parent="." instance=ExtResource("12_vdhv8")]
+transform = Transform3D(0.735471, 0, 0.677557, 0, 1, 0, -0.677557, 0, 0.735471, -30.9109, -1.03707, 1.89399)
+
+[node name="Door2" parent="." instance=ExtResource("12_vdhv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.1786, -1.05665, 3.45867)
+
 [connection signal="body_entered" from="pallet" to="pallet" method="_on_body_entered"]
+[connection signal="interacted" from="Button" to="Door" method="toggle"]

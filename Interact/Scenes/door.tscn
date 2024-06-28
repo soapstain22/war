@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://deofr6q3l1ba3"]
+
+[ext_resource type="PackedScene" uid="uid://cpq8hfpdxiyje" path="res://Models/SimpleDoor.fbx" id="1_bwhhf"]
+[ext_resource type="Script" path="res://Interact/door.gd" id="2_4sip4"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2also"]
+animation = &"Take 001"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ib0qq"]
+animation = &"Take 001"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ufiq7"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6angf"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_p4t8j"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y6erm"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_utd27"]
+states/DoorClose/node = SubResource("AnimationNodeAnimation_2also")
+states/DoorClose/position = Vector2(416, 167)
+states/DoorOpen/node = SubResource("AnimationNodeAnimation_ib0qq")
+states/DoorOpen/position = Vector2(439, 44)
+states/Start/position = Vector2(159, 121)
+transitions = ["Start", "DoorOpen", SubResource("AnimationNodeStateMachineTransition_ufiq7"), "DoorOpen", "End", SubResource("AnimationNodeStateMachineTransition_6angf"), "DoorOpen", "DoorClose", SubResource("AnimationNodeStateMachineTransition_p4t8j"), "DoorClose", "DoorOpen", SubResource("AnimationNodeStateMachineTransition_y6erm")]
+
+[node name="Door" instance=ExtResource("1_bwhhf")]
+script = ExtResource("2_4sip4")
+
+[node name="SimpleDoor_Handle1_LOD0" parent="RootNode/Global_Control/SimpleDoor_MainDoor_LOD0" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="SimpleDoor_Handle2_LOD0" parent="RootNode/Global_Control/SimpleDoor_MainDoor_LOD0" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="SimpleDoor_Handle1_LOD2" parent="RootNode/Global_Control/SimpleDoor_MainDoor_LOD2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="SimpleDoor_Handle2_LOD2" parent="RootNode/Global_Control/SimpleDoor_MainDoor_LOD2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="SimpleDoor_Handle1_LOD1" parent="RootNode/Global_Control/SimpleDoor_MainDoor_LOD1" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="SimpleDoor_Handle2_LOD1" parent="RootNode/Global_Control/SimpleDoor_MainDoor_LOD1" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Controls1_Open_Close" parent="RootNode/Global_Control/UI_Curve" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeStateMachine_utd27")
+anim_player = NodePath("../AnimationPlayer")
