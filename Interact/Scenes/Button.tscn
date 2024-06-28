@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bo04i6uf62aeu"]
+[gd_scene load_steps=7 format=3 uid="uid://bo04i6uf62aeu"]
 
-[ext_resource type="Script" path="res://Interact/Interactable.gd" id="1_iuy3i"]
+[ext_resource type="Script" path="res://Interact/Scenes/Button.gd" id="1_hgnhy"]
 [ext_resource type="Texture2D" uid="uid://gqg48lh36fcv" path="res://Textures/button-diff.png" id="1_o8wq6"]
 [ext_resource type="ArrayMesh" uid="uid://dp275p2y2nw4x" path="res://Models/buttonModel.tres" id="2_f2xqe"]
+[ext_resource type="AudioStream" uid="uid://c0rbi8jsolof5" path="res://sfx/ControllerSounds.wav" id="4_e3lou"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1pmno"]
 albedo_texture = ExtResource("1_o8wq6")
@@ -11,7 +12,7 @@ albedo_texture = ExtResource("1_o8wq6")
 size = Vector3(1, 0.644531, 1)
 
 [node name="Button" type="StaticBody3D"]
-script = ExtResource("1_iuy3i")
+script = ExtResource("1_hgnhy")
 
 [node name="MeshInstance" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_1pmno")
@@ -20,3 +21,8 @@ mesh = ExtResource("2_f2xqe")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.177734, 0)
 shape = SubResource("BoxShape3D_ksa1u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_e3lou")
+
+[connection signal="interacted" from="." to="." method="_on_interacted"]
