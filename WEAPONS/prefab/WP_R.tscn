@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://dowwqspxheytq"]
 
-[ext_resource type="Script" path="res://WEAPONS/scripts/Gun.gd" id="1_3lank"]
-[ext_resource type="PackedScene" uid="uid://dnkjc7xva5tfi" path="res://PROJECTILES/prefab/rocket.tscn" id="2_ixfdg"]
-[ext_resource type="Texture2D" uid="uid://bu877fpdhylxh" path="res://IMG/hud/weapons/launcher.png" id="3_3xc8w"]
-[ext_resource type="AudioStream" uid="uid://dbuki7qko1pkc" path="res://sfx/WEAP1005.WAV" id="3_tt3lu"]
+[ext_resource type="Script" path="res://WEAPONS/scripts/Gun.gd" id="1_kfefo"]
+[ext_resource type="PackedScene" uid="uid://dnkjc7xva5tfi" path="res://PROJECTILES/prefab/rocket.tscn" id="2_n1agg"]
+[ext_resource type="AudioStream" uid="uid://dbuki7qko1pkc" path="res://sfx/WEAP1005.WAV" id="3_rtmtl"]
+[ext_resource type="Texture2D" uid="uid://bu877fpdhylxh" path="res://IMG/hud/weapons/launcher.png" id="4_w4vja"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h7qsq"]
 resource_name = "DefaultMaterial"
@@ -46,11 +46,11 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_nu8l2")
 
 [node name="Node3D" type="Node3D"]
-script = ExtResource("1_3lank")
-bullet = ExtResource("2_ixfdg")
+script = ExtResource("1_kfefo")
+bullet = ExtResource("2_n1agg")
 throwPoint = Vector3(10, -10, 0)
-firesound = ExtResource("3_tt3lu")
-image = ExtResource("3_3xc8w")
+firesound = ExtResource("3_rtmtl")
+image = ExtResource("4_w4vja")
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-06, 100, 0, -100, -4.37114e-06, 0, 0, 0, 100, 0.3, -0.3, -0.2)

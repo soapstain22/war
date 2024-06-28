@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be5v7srogu4ff"
-path.s3tc="res://.godot/imported/Aggregate 2_1024.png-7f405d214db9906d231bd6352ce9a92e.s3tc.ctex"
+uid="uid://c7gm6pp3260ti"
+path="res://.godot/imported/Batten Siding_1024.png-97edfc20dbbb5efedb1b46910c2932f6.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://IMG/texture/Aggregate 2_1024.png"
-dest_files=["res://.godot/imported/Aggregate 2_1024.png-7f405d214db9906d231bd6352ce9a92e.s3tc.ctex"]
+source_file="res://IMG/texture/Batten Siding_1024.png"
+dest_files=["res://.godot/imported/Batten Siding_1024.png-97edfc20dbbb5efedb1b46910c2932f6.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -32,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

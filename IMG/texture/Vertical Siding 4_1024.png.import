@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be5v7srogu4ff"
-path.s3tc="res://.godot/imported/Aggregate 2_1024.png-7f405d214db9906d231bd6352ce9a92e.s3tc.ctex"
+uid="uid://cm1h2b7r1tdy"
+path.s3tc="res://.godot/imported/Vertical Siding 4_1024.png-c2263e547941fe339219081e69a32536.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://IMG/texture/Aggregate 2_1024.png"
-dest_files=["res://.godot/imported/Aggregate 2_1024.png-7f405d214db9906d231bd6352ce9a92e.s3tc.ctex"]
+source_file="res://IMG/texture/Vertical Siding 4_1024.png"
+dest_files=["res://.godot/imported/Vertical Siding 4_1024.png-c2263e547941fe339219081e69a32536.s3tc.ctex"]
 
 [params]
 
