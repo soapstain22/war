@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwqjg8ir1otcg"]
+[gd_scene load_steps=8 format=3 uid="uid://dwqjg8ir1otcg"]
 
 [ext_resource type="Script" path="res://thePlayerOfTheGameThatIsBeingPlayed.gd" id="1_xbier"]
 [ext_resource type="Script" path="res://hud.gd" id="2_tqpvl"]
+[ext_resource type="PackedScene" uid="uid://b8ba1x8mt4xds" path="res://Interact/interact_ray.tscn" id="2_yf8uk"]
 [ext_resource type="Texture2D" uid="uid://babtwgfit1ex5" path="res://IMG/hud/hud.png" id="3_i0ifh"]
 [ext_resource type="Texture2D" uid="uid://7c201cy3pitt" path="res://IMG/hud/weapon.png" id="4_b8rae"]
 [ext_resource type="Texture2D" uid="uid://vwhb1v0gjnca" path="res://IMG/hud/weapons/smg.png" id="5_50k28"]
@@ -19,6 +20,8 @@ omni_range = 182.099
 
 [node name="hand" type="Node3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -0.7)
+
+[node name="InteractRay" parent="Camera3D" instance=ExtResource("2_yf8uk")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

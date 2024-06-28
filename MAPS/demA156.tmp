@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bppq1ctor0b8w"]
+[gd_scene load_steps=13 format=3 uid="uid://bppq1ctor0b8w"]
 
 [ext_resource type="Material" uid="uid://dog7a5ugduubm" path="res://MATERIAL/bricks.tres" id="1_2tq5y"]
 [ext_resource type="PackedScene" uid="uid://dwqjg8ir1otcg" path="res://player.tscn" id="1_8u85u"]
@@ -10,7 +10,6 @@
 [ext_resource type="Script" path="res://PREFAB/destructable.gd" id="7_k58q7"]
 [ext_resource type="Script" path="res://code/destructable.gd" id="9_bchx3"]
 [ext_resource type="Texture2D" uid="uid://cm1h2b7r1tdy" path="res://IMG/texture/Vertical Siding 4_1024.png" id="9_u44q1"]
-[ext_resource type="PackedScene" uid="uid://bo04i6uf62aeu" path="res://Interact/Scenes/Button.tscn" id="11_7hqlq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mr44t"]
 size = Vector3(2, 0.1, 2)
@@ -134,17 +133,5 @@ shape = SubResource("BoxShape3D_mr44t")
 [node name="CSGBox3D" type="CSGBox3D" parent="pallet"]
 size = Vector3(2, 0.1, 2)
 material = SubResource("StandardMaterial3D_qw2ud")
-
-[node name="Button" parent="." instance=ExtResource("11_7hqlq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.9136, -0.641092, -3.34467)
-prompt_message = "Subscribe"
-
-[node name="Button2" parent="." instance=ExtResource("11_7hqlq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.9136, -0.641092, -3.34467)
-prompt_message = "Chat"
-
-[node name="Button3" parent="." instance=ExtResource("11_7hqlq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.9136, -0.641092, -3.34467)
-prompt_message = "DM"
 
 [connection signal="body_entered" from="pallet" to="pallet" method="_on_body_entered"]
