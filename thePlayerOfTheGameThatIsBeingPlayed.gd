@@ -17,6 +17,8 @@ var weapons : Array
 var weaponIndex = 0
 var HUD
 var hand: Node3D
+var headlag= 1
+var crouch = 1
 @export var maxhealth= 100
 @export var health = 100 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -45,7 +47,7 @@ func _input(event):
 	#	get_tree().quit()
 	pass
 func _update_camera(delta):
-	
+
 	# Rotates camera using euler rotation
 	_mouse_rotation.x += _tilt_input * delta
 	_mouse_rotation.x = clamp(_mouse_rotation.x, TILT_LOWER_LIMIT, TILT_UPPER_LIMIT)
@@ -83,11 +85,11 @@ func ask_health(ct):
 
 	return true
 func _physics_process(delta):
-	
+
 	# Update camera movement based on mouse movement
 	_update_camera(delta)
-	
-	# Add the gravity.
+
+	# Add the gravity.i
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
@@ -105,9 +107,15 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		
+		CAMERA_CONTROLLER.position = Vector3.UP*abs(sin(headlag*9))/3+Vector3.UP*1.5
+		var spd = global_position.distance_to(global_position+direction)
+		headlag+=delta
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+
+		CAMERA_CONTROLLER.position = Vector3.UP*lerpf(CAMERA_CONTROLLER.position.y,1.5,delta*5)
 	var a = weapons[weaponIndex]
 	#a.global_position = hand.global_position + CAMERA_CONTROLLER.basis*a.currentAim
 	move_and_slide()
