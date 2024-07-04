@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cpq8hfpdxiyje"
-path="res://.godot/imported/SimpleDoor.fbx-0022f41dc3c848fba6443949fb9a0121.scn"
+uid="uid://h51yuueewi7"
+path="res://.godot/imported/gun.fbx-3cc16687ad491fdb7d92d3e7326c99d2.scn"
 
 [deps]
 
-source_file="res://models/SimpleDoor.fbx"
-dest_files=["res://.godot/imported/SimpleDoor.fbx-0022f41dc3c848fba6443949fb9a0121.scn"]
+source_file="res://models/gun.fbx"
+dest_files=["res://.godot/imported/gun.fbx-3cc16687ad491fdb7d92d3e7326c99d2.scn"]
 
 [params]
 

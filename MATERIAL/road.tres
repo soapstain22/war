@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dchb8ptueisig"]
-
-[ext_resource type="Texture2D" uid="uid://s1ft4tu5c1ax" path="res://IMG/texture/Travertine Finish 1_1024.png" id="1_bvkao"]
-
-[resource]
-albedo_color = Color(0.0768358, 0.0768358, 0.0768358, 1)
-albedo_texture = ExtResource("1_bvkao")
-uv1_triplanar = true

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp7pbollael1n"]
+
+[ext_resource type="Script" path="res://code/prefabs/bullet.gd" id="1_005pi"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1e02f"]
+radius = 1.0
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_005pi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_1e02f")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+radius = 0.9
+radial_segments = 8
+rings = 8

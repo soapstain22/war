@@ -3,20 +3,20 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cpq8hfpdxiyje"
-path="res://.godot/imported/SimpleDoor.fbx-0022f41dc3c848fba6443949fb9a0121.scn"
+uid="uid://bkl6kt1oqkawf"
+path="res://.godot/imported/rocketlauncher.fbx-afb20dc3477ef3013ecab38048b083b5.scn"
 
 [deps]
 
-source_file="res://models/SimpleDoor.fbx"
-dest_files=["res://.godot/imported/SimpleDoor.fbx-0022f41dc3c848fba6443949fb9a0121.scn"]
+source_file="res://models/rocketlauncher.fbx"
+dest_files=["res://.godot/imported/rocketlauncher.fbx-afb20dc3477ef3013ecab38048b083b5.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=0.2
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true

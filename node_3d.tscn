@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bqjvnw3jbb4k3"]
 
-[ext_resource type="PackedScene" uid="uid://dwqjg8ir1otcg" path="res://player.tscn" id="1_qug5v"]
-[ext_resource type="Material" uid="uid://cmk0toxo4tige" path="res://MATERIAL/conk.tres" id="2_3udce"]
-[ext_resource type="Material" uid="uid://dog7a5ugduubm" path="res://MATERIAL/bricks.tres" id="2_yc4a1"]
-[ext_resource type="Material" uid="uid://bsrfghe046mdv" path="res://MATERIAL/walls.tres" id="4_vtfn3"]
-[ext_resource type="PackedScene" uid="uid://dnkjc7xva5tfi" path="res://PROJECTILES/prefab/rocket.tscn" id="5_jc14f"]
+[ext_resource type="PackedScene" uid="uid://dwqjg8ir1otcg" path="res://scenes/prefabs/entities/player.tscn" id="1_qug5v"]
+[ext_resource type="Material" uid="uid://cmk0toxo4tige" path="res://materials/conk.tres" id="2_3udce"]
+[ext_resource type="Material" uid="uid://dog7a5ugduubm" path="res://materials/bricks.tres" id="2_yc4a1"]
+[ext_resource type="Material" uid="uid://bsrfghe046mdv" path="res://materials/walls.tres" id="4_vtfn3"]
+[ext_resource type="PackedScene" uid="uid://dnkjc7xva5tfi" path="res://scenes/prefabs/projectiles/rocket.tscn" id="5_jc14f"]
 
 [node name="rooty" type="Node3D"]
 

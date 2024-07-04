@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://64ofqqkvi8o6"]
+
+[ext_resource type="Script" path="res://code/weapons/Gun.gd" id="1_jxt25"]
+[ext_resource type="PackedScene" uid="uid://cp7pbollael1n" path="res://scenes/prefabs/projectiles/bullet.tscn" id="2_jveac"]
+[ext_resource type="PackedScene" uid="uid://h51yuueewi7" path="res://models/gun.fbx" id="3_ojus7"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_jxt25")
+bullet = ExtResource("2_jveac")
+
+[node name="Root Scene" parent="." instance=ExtResource("3_ojus7")]
+transform = Transform3D(-4.37114e-09, 0.1, 0, 4.37114e-09, 4.44089e-16, -0.1, -0.1, -4.37114e-09, -4.37114e-09, 4.37114e-09, 0.1, 0)

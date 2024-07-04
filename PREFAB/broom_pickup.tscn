@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0cswnu1rfoqc"]
-
-[ext_resource type="Script" path="res://PREFAB/weapon_pickup.gd" id="1_4bags"]
-[ext_resource type="PackedScene" uid="uid://d18heii7t7vwd" path="res://WEAPONS/model/broom.fbx" id="2_wcww5"]
-
-[node name="BroomPickup" type="Node3D"]
-script = ExtResource("1_4bags")
-
-[node name="Root Scene" parent="." instance=ExtResource("2_wcww5")]

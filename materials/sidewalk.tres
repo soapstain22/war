@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dhmq215fg6872"]
+
+[ext_resource type="Texture2D" uid="uid://s1ft4tu5c1ax" path="res://images/texture/Travertine Finish 1_1024.png" id="1_vwi7v"]
+
+[resource]
+albedo_texture = ExtResource("1_vwi7v")
+uv1_triplanar = true
