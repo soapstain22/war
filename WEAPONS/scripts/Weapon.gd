@@ -6,5 +6,9 @@ func attack():
 	pass
 func attack_release():
 	pass
+func aimdown():
+	pass
+func aimdown_release():
+	pass 
 func reload():
 	pass

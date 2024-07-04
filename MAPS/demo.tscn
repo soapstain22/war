@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bppq1ctor0b8w"]
+[gd_scene load_steps=14 format=3 uid="uid://bppq1ctor0b8w"]
 
 [ext_resource type="Material" uid="uid://dog7a5ugduubm" path="res://MATERIAL/bricks.tres" id="1_2tq5y"]
 [ext_resource type="PackedScene" uid="uid://dwqjg8ir1otcg" path="res://player.tscn" id="1_8u85u"]
@@ -7,7 +7,6 @@
 [ext_resource type="Material" uid="uid://btj7dp0pghbnn" path="res://MATERIAL/lawn.tres" id="3_4x68c"]
 [ext_resource type="Material" uid="uid://dhmq215fg6872" path="res://MATERIAL/sidewalk.tres" id="5_xcur8"]
 [ext_resource type="Material" uid="uid://dchb8ptueisig" path="res://MATERIAL/road.tres" id="6_2wbwn"]
-[ext_resource type="Script" path="res://PREFAB/destructable.gd" id="7_k58q7"]
 [ext_resource type="Script" path="res://code/destructable.gd" id="9_bchx3"]
 [ext_resource type="Texture2D" uid="uid://cm1h2b7r1tdy" path="res://IMG/texture/Vertical Siding 4_1024.png" id="9_u44q1"]
 [ext_resource type="PackedScene" uid="uid://bo04i6uf62aeu" path="res://Interact/Scenes/Button.tscn" id="11_7hqlq"]
@@ -123,7 +122,6 @@ light_volumetric_fog_energy = 5.226
 light_angular_distance = 28.8
 
 [node name="Node3D" type="Node3D" parent="."]
-script = ExtResource("7_k58q7")
 
 [node name="pallet" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
