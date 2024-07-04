@@ -4,5 +4,7 @@ class_name Weapon
 @export var image: CompressedTexture2D
 func attack():
 	pass
+func attack_release():
+	pass
 func reload():
 	pass

@@ -1,0 +1,3 @@
+imported using github.com/qoh/io_scene_dts/releases/tag/v0.2.0
+the white material on the lightbulbs and the material on the lcd's should be set to shadeless
+that's all

@@ -1,0 +1,24 @@
+NOTES:
+This model was exported using Torque3D 1.2 which can be found on GarageGames' GitHub and Blender 3.1.
+The model does not contain its baked lighting. As it is only a rip of the "interior" in Torque terms, it does not contain the grassy exterior of the map. The trees on the exterior, the numbers on the LCD alarm clock, the lightbulb of the lamp and the glass panes on the windows are separate models also included in the .zip.
+Torque3D exports the UV maps with erroneous vertical orientation; I fixed this by simply flipping it vertically by putting the UV map cursor in Blender 3.1 on the very center of the atlas and using that as the pivot. The UVs are intact outside of this.
+The original exported .dae from Torque3D is available in the .zip. You can follow the steps from A to D down below if you have trouble importing it.
+Also, yeah, the game used JPGs for its maps.
+
+INSTRUCTIONS FOR RIPPING BLOCKLAND INTERIORS WITH TORQUE3D:
+1. Download Torque3D from https://archive.org/details/torque3d11 or https://github.com/GarageGames/Torque3D/tree/v1.1
+2. Extract Torque3D and open Torque3D Toolbox
+3. Create a new project on Torque3D, select the "Empty" template, then quit Torque3D
+4. Go to your v20 Blockland folder and open the map Add-On you want to rip
+5. After that's done, assuming you're still in the folder with Torque3D, go to My Projects -> [the name you entered for your recently created project] -> game -> levels
+6. Extract everything in the Add-On's .zip to that folder
+8. Open Torque3D again, select the map as a level, then select World Editor
+9. Go to File -> Export Interiors to COLLADA
+10. Find the .dae inside the levels folder
+11. ???
+12. PROFIT!
+OPTIONAL STEPS IF THE .DAE DOES NOT GET IMPORTED (thanks wrapperup)
+A. Open the .dae in a text editor
+B. Find "<library_effects>" (without quotation marks, obviously)
+C. Delete all of the text between the <diffuse> tags
+D. Repeat for all <effect> tags until you reach the end of <library_effects>

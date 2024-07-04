@@ -38,10 +38,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		changeweapon(-1)
 	if event.is_action_pressed("action"):
 		var a = weapons[weaponIndex] as Weapon
-		#a.aimdown = true
 	else:
 		var a = weapons[weaponIndex] as Weapon
-		#a.aimdown = false
+
+	if event.is_action_pressed("run"):
+		SPEED = 9
+	if event.is_action_released("run"):
+		SPEED = 5
 func _input(event):
 	#if event.is_action_pressed("exit"):
 	#	get_tree().quit()
@@ -107,15 +110,15 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		
-		CAMERA_CONTROLLER.position = Vector3.UP*abs(sin(headlag*9))/3+Vector3.UP*1.5
-		var spd = global_position.distance_to(global_position+direction)
-		headlag+=delta
+		if is_on_floor():
+			CAMERA_CONTROLLER.position = Vector3.UP*abs(sin(headlag*SPEED))/3+Vector3.UP*1.5
+			var spd = global_position.distance_to(global_position+direction)
+			headlag+=delta
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-
-		CAMERA_CONTROLLER.position = Vector3.UP*lerpf(CAMERA_CONTROLLER.position.y,1.5,delta*5)
+		if not is_on_floor():
+			CAMERA_CONTROLLER.position = Vector3.UP*lerpf(CAMERA_CONTROLLER.position.y,1.5,delta*5)
 	var a = weapons[weaponIndex]
 	#a.global_position = hand.global_position + CAMERA_CONTROLLER.basis*a.currentAim
 	move_and_slide()
@@ -129,8 +132,8 @@ func attack():
 	if b != null:
 		b.global_position = hand.global_position
 		b.global_rotation = hand.global_rotation
-		b.apply_central_force(CAMERA_CONTROLLER.global_basis*Vector3.FORWARD)
-		b.apply_impulse(CAMERA_CONTROLLER.global_basis*Vector3.FORWARD*a.force)
+		b.linear_velocity = CAMERA_CONTROLLER.global_basis*b.linear_velocity
+		#b.linear_velocity = CAMERA_CONTROLLER.global_basis*b.linear_velocity
 		print("hi")
 	#HUD.setMaxAmmo(a.maxammo)
 	#HUD.setAmmo(a.ammo)

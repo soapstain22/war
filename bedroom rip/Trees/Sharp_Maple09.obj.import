@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://mcf3u2ma444u"
+path="res://.godot/imported/Sharp_Maple09.obj-5964dba058f4e94aea360a79d39afb4d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Sharp_Maple09.obj-5964dba058f4e94aea360a79d39afb4d.mesh"]
+
+source_file="res://bedroom rip/Trees/Sharp_Maple09.obj"
+dest_files=["res://.godot/imported/Sharp_Maple09.obj-5964dba058f4e94aea360a79d39afb4d.mesh", "res://.godot/imported/Sharp_Maple09.obj-5964dba058f4e94aea360a79d39afb4d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

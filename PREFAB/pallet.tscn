@@ -21,4 +21,6 @@ shape = SubResource("BoxShape3D_mr44t")
 size = Vector3(2, 0.1, 2)
 material = SubResource("StandardMaterial3D_qw2ud")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

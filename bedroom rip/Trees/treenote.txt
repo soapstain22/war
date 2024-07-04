@@ -1,0 +1,2 @@
+imported using github.com/qoh/io_scene_dts/releases/tag/v0.2.0
+model has two materials with the same texture, disable transparency on the first material so the stems render properly (they are mapped to a transparent part of the texture and so show up as invisible without doing this)

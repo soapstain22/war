@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dfderud2x2vxh"
+path="res://.godot/imported/glassa.obj-efdce9f8755c28b36c9053e1ffa483be.mesh"
+
+[deps]
+
+files=["res://.godot/imported/glassa.obj-efdce9f8755c28b36c9053e1ffa483be.mesh"]
+
+source_file="res://bedroom rip/Glass panels/glassa.obj"
+dest_files=["res://.godot/imported/glassa.obj-efdce9f8755c28b36c9053e1ffa483be.mesh", "res://.godot/imported/glassa.obj-efdce9f8755c28b36c9053e1ffa483be.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

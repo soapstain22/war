@@ -48,7 +48,6 @@ shadow_mesh = SubResource("ArrayMesh_nu8l2")
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_kfefo")
 bullet = ExtResource("2_n1agg")
-throwPoint = Vector3(10, -10, 0)
 firesound = ExtResource("3_rtmtl")
 image = ExtResource("4_w4vja")
 

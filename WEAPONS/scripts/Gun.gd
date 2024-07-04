@@ -8,26 +8,24 @@ var curAimdownTime = 0.2
 @export var aimdownPos:Vector3
 var currentAim:Vector3
 @export var defaultAim:Vector3
-@export var force = 10
 @export var ammo = 40
 @export var maxammo = 40
-@export var ammotimerOnreset = 2
-@export var ammotimer = 2
+@export var reloadTimer = 2
 @export var bullet :PackedScene
 @export var clip = 7
-@export var throwPoint:Vector3
+
 @export var clipsize = 7
 var attemptingReload = false
 var aimdown = false
 @export var firesound : AudioStreamWAV
-@export var cooldown = 2
+var cooldown = 0
 @export var delay = 1
 func _process(delta):
 	if cooldown > 0:
 		#print(cooldown)
 		cooldown = cooldown - delta
-	if ammotimer > 0 && attemptingReload:
-		ammotimer -= delta
+	if reloadTimer > 0 && attemptingReload:
+		reloadTimer -= delta
 	if aimdown:
 		if (curAimdownTime+delta < aimdownTime):
 			curAimdownTime += delta
@@ -49,7 +47,8 @@ func stopAimDown():
 func attack():
 	print("a")
 	if (cooldown <= 0):
-		var newbullet = bullet.instantiate()
+		var newbullet = bullet.instantiate() as RigidBody3D
+		newbullet.linear_velocity+=Vector3.FORWARD*10
 		get_tree().root.get_child(0).add_child(newbullet)
 		cooldown = delay
 		newbullet as RigidBody3D
